@@ -29,10 +29,13 @@ export default function Header() {
               </div>
             </SignedOut>
             <SignedIn>
-              <Link href="/dashboard" className="text-gray-300">
+              <Link href="/repos" className="text-gray-300 mr-6">
+                Repos
+              </Link>
+              <Link href="/dashboard" className="text-gray-300 mr-6">
                 Dashboard-S
               </Link>
-              <Link href="/dashboard-c" className="text-gray-300">
+              <Link href="/dashboard-c" className="text-gray-300 mr-6">
                 Dashboard-C
               </Link>
               <div className="text-gray-300 hover:text-white mr-4">
