@@ -18,7 +18,10 @@ export default async function RepoDirs({ name }: RepoProps) {
       },
     }
   )
-  const contents: GithubContent[] = await response.json()
+  const contentsJson = await response.json()
+  const contents: GithubContent[] = Array.isArray(contentsJson)
+    ? contentsJson
+    : []
 
   const dirs = contents.filter((content) => content.type === 'dir')
 

@@ -4,7 +4,12 @@ import { Suspense } from 'react'
 import Repo from '@/components/Repo'
 import RepoDirs from '@/components/RepoDirs'
 
-export default function RepoPage({ params }: { params: { name: string } }) {
+export default async function RepoPage({
+  params,
+}: {
+  params: { name: string }
+}) {
+  const { name } = await params
   return (
     <div className="flex flex-col justify-start items-start max-w-lg">
       <Link
