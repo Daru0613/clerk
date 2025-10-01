@@ -31,7 +31,11 @@ export default async function RepoDirs({ name }: RepoProps) {
       <ul>
         {dirs.map((dir) => (
           <li key={dir.path}>
-            <Link href={`/repos/${name}`}>{dir.path}</Link>
+            <Link
+              href={`https://github.com/${username}/${name}/tree/master/${dir.path}`}
+            >
+              {dir.path}
+            </Link>
           </li>
         ))}
       </ul>
